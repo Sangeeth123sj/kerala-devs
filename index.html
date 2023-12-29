@@ -5,6 +5,8 @@
     <link rel="icon" type="image/webp" href="static/elephant1.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenSource Gig Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="basic-styles.css">
     <style>
@@ -76,7 +78,7 @@
                 <p>Unleash the potential of your portfolio by contributing to this dynamic open-source project. Whether you're a seasoned developer or just starting your journey, collaborating on this platform is the gateway to showcasing your skills to the world. Every commit, every line of code, and every idea you bring adds depth to your portfolio and amplifies your expertise.
                     By joining our community of passionate developers, you gain the opportunity to work on real-world projects, collaborate with industry professionals, and leave your mark in the thriving Python ecosystem. Build your profile, showcase your contributions, and elevate your credibility among potential employers. Let your journey to professional growth begin here!
                 </p>
-                <button class="btn btn-dark ">Contribute<img class="github-icon" src="static/github.svg"></button>
+                <a class="btn btn-dark" href="https://github.com/Sangeeth123sj/kerala-devs">Contribute<img class="github-icon" src="static/github.svg"></a>
             </div>
            
         </div>
@@ -96,7 +98,7 @@
                     Experience a platform tailored to your needs, providing direct connections to local employers, cutting through the noise of international job portals.
                     Join a community that prioritizes local talent, offering a gateway to prime career opportunities within Kerala's thriving tech landscape.
                      Your next career move awaits, right here in the heart of Kerala's innovation hub!</p>
-                     <button class="btn btn-dark ">Join Waitlist<img class="github-icon" src="static/join.svg"></button>
+                     <button class="btn btn-dark" onclick="openWaitlistForm()">Join Waitlist<img class="github-icon" src="static/join.svg"></button>
             </div>
             <div class="col-md-6">
                 <img src="static/interview.jpg" alt="Exclusive Job/Gig Platform" class="img-fluid landing-image">
@@ -118,7 +120,7 @@
                     Fork the repository and become an integral part of this collaborative journey. Your contributions will not only be acknowledged but celebrated as you leave an indelible mark on this open-source gig/job platform. Stand out among the community, gain visibility, and be part of the pioneering force shaping the future of Kerala's tech ecosystem.
                     Join the elite league of platform builders and solidify your presence in the Hall of Fame!<br/>
                     Fork the repo and contribute!</p>
-                <button class="btn btn-dark ">Contribute<img class="github-icon" src="static/github.svg"></button>
+                <a class="btn btn-dark" href="https://github.com/Sangeeth123sj/kerala-devs">Contribute<img class="github-icon" src="static/github.svg"></a>
             </div>
             
         </div>
@@ -160,5 +162,53 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function openWaitlistForm() {
+            Swal.fire({
+                title: 'Enter Email',
+                input: 'text',
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                preConfirm: async (email) => {
+                    try {
+                        const formData = new FormData();
+                        formData.append('email', email);
+
+                        const response = await fetch('http://127.0.0.1:8000/submit_email/', {
+                        method: 'POST',
+                        body: formData
+                        });
+
+                        if (!response.ok) {
+                        const errorMsg = await response.json();
+                        throw new Error(JSON.stringify(errorMsg));
+                        }
+
+                        return response.json();
+                    } catch (error) {
+                        throw new Error(`Request failed: ${error}`);
+                    }
+                    },
+                    allowOutsideClick: () => !Swal.isLoading()
+                })
+                .then((result) => {
+                    if (result.value) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: `Received email: ${result.value.email}`
+                    });
+                    }
+                })
+                .catch((error) => {
+                    Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: error.message
+                });
+            });
+        }
+
+    </script>
 </body>
 </html>
