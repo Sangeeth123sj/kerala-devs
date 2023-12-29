@@ -2,6 +2,10 @@
 
 Welcome to the OpenSource Kerala Developers Gig/Job Platform! This platform is dedicated to fostering the growth of the Python community in Kerala, serving as a hub for freelancers and job seekers, offering opportunities, and encouraging collaboration within the community.
 
+**Still in the initial stages of the project, looking for 6 initial contributors to join this project!**
+**Let me know if you are interested. Contact me at [sangeeth123sj@gmail.com](mailto:sangeeth123sj@gmail.com)**
+
+
 ## About
 
 The aim of this project is to create an open-source job/freelance platform tailored specifically for Kerala's Python developers. It's an initiative to assist community members in their career growth, providing access to job opportunities, freelance gigs, and fostering collaboration among Python enthusiasts in Kerala.
