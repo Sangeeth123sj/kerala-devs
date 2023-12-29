@@ -4,7 +4,7 @@ Welcome to the OpenSource Kerala Developers Gig/Job Platform! This platform is d
 
 **Still in the initial stages of the project, looking for 6 initial contributors to join this project!**
 **Let me know if you are interested. Contact me at [sangeeth123sj@gmail.com](mailto:sangeeth123sj@gmail.com)**
-
+**Website Link: [https://kerala-devs.vercel.app](https://kerala-devs.vercel.app)**
 
 ## About
 
