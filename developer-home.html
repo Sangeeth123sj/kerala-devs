@@ -16,86 +16,260 @@
     <title>OpenSource Gig Platform</title>
   </head>
   <body>
-    <div class="row mx-auto">
-      <nav class="navbar navbar-expand-lg bg-light p-3 mb-3 border-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand text-dark me-4 kerala-dev-logo custom-title" href="/">
-            Kerala Devs
-            <img src="./static/elephant1.webp" alt="kerala-dev-logo" srcset="">
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse mx-2"
-            id="navbarSupportedContent"
-          >
-            <div class="col-md-4">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active text-dark mx-2"
-                    aria-current="page"
-                    href="#"
-                    >Jobs</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark mx-2" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark mx-2"  href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <form class="d-flex" role="search" action="" method="post">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search jobs or companies"
-                  aria-label="Search"
-                />
-              </form>
-            </div>
-            <div class="dropdown col-md-4 d-none d-sm-none d-md-none d-lg-block">
-              <a
-                href="#"
-                class="d-block link-dark text-decoration-none dropdown-toggle text-md-end"
-                id="dropdownUser1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+    <!-- Header -->
+    <header>
+      <div class="row mx-auto">
+        <nav class="navbar navbar-expand-lg bg-light p-3 mb-3 border-bottom fixed-top">
+          <div class="container-fluid">
+            <a
+              class="navbar-brand text-dark me-4 kerala-dev-logo custom-title"
+              href="/"
+            >
+              Kerala Devs
+              <img
+                src="./static/elephant1.webp"
+                alt="kerala-dev-logo"
+                srcset=""
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse mx-2"
+              id="navbarSupportedContent"
+            >
+              <div class="col-md-4">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-dark mx-2"
+                      aria-current="page"
+                      href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark mx-2" href="#">Companies</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark mx-2" href="#">About</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <form class="d-flex" role="search" action="" method="post">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search jobs or companies"
+                    aria-label="Search"
+                  />
+                </form>
+              </div>
+              <div
+                class="dropdown col-md-4 d-none d-sm-none d-md-none d-lg-block"
               >
-                <img
-                  src="https://github.com/mdo.png"
-                  alt="mdo"
-                  width="32"
-                  height="32"
-                  class="rounded-circle"
-                />
+                <a
+                  href="#"
+                  class="d-block link-dark text-decoration-none dropdown-toggle text-md-end"
+                  id="dropdownUser1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://github.com/mdo.png"
+                    alt="mdo"
+                    width="32"
+                    height="32"
+                    class="rounded-circle"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu text-small dropdown-menu-end"
+                  aria-labelledby="dropdownUser1"
+                >
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Stack</a></li>
+                  <li><a class="dropdown-item" href="#">settings</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Job Sections -->
+    <section style="margin-top: 115px;">
+      <div class="container mt-4">
+        <!-- Job section 1 -->
+        <h4 class="">Latest Jobs</h4>
+        <div class="row d-flex justify-content-around">
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 1</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 1</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
               </a>
-              <ul
-                class="dropdown-menu text-small dropdown-menu-end"
-                aria-labelledby="dropdownUser1"
-              >
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Stack</a></li>
-                <li><a class="dropdown-item" href="#">settings</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 2</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 2</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 3</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 3</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 4</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 4</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div
+              class="card-body d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View More...</button>
+              </a>
             </div>
           </div>
         </div>
-      </nav>
+        <!-- Job section 2 -->
+        <h4 class="my-2">Jobs based on your profile</h4>
+        <div class="row d-flex justify-content-around">
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 1</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 1</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 2</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 2</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 3</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 3</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div class="card-body">
+              <h5 class="card-title">Job 4</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Company 4</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View</button>
+              </a>
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">Apply</button>
+              </a>
+            </div>
+          </div>
+          <div class="card my-4" style="width: 15rem; height: 16rem">
+            <div
+              class="card-body d-flex justify-content-center align-items-center"
+            >
+              <a href="#" class="card-link text-decoration-none">
+                <button type="button" class="btn btn-dark">View More...</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div class="row">
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
