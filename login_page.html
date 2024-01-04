@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #343a40; /* Dark variant */
+            border-radius: 10px 10px 0 0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn-primary {
+            background-color: #343a40; /* Dark variant */
+            border: none;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+        }
+
+        .btn-google {
+           background-color: transparent; /* Set background to transparent */
+    border: 2px solid #ffffff; /* Add a white border */
+    color: white;
+    border-radius: 50%; /* Make it circular */
+    width: 48px; /* Set the width of the button */
+    height: 48px; /* Set the height of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center the button horizontally */
+                  }
+
+        .google-icon {
+            width: 24px; /* Set the width of the Icon */
+            height: 24px; /* Set the height of the Icon */
+            margin-right: 0px; /* Adjust margin for spacing */
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .back-button {
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card mx-auto" style="max-width: 400px;">
+        <div class="card-header" id="cardHeader">
+            <h4 class="mb-0">Login</h4>
+            <span class="back-button" onclick="showLogin()">← Back</span>
+        </div>
+        <div class="card-body">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <hr>
+            <div class="forgot-password" id="forgotPasswordLink">
+                <span onclick="showForgotPassword()">Forgot Password?</span>
+            </div>
+            <form id="forgotPasswordForm" style="display: none;">
+                <div class="form-group">
+                    <label for="forgotEmail">Enter your email to reset password</label>
+                    <input type="email" class="form-control" id="forgotEmail" placeholder="Enter email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
+            </form>
+            <button class="btn btn-google btn-block">
+    <img src="static/google.png" class="google-icon" alt="Google Icon">
+</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Font Awesome icons -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function showForgotPassword() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("forgotPasswordForm").style.display = "block";
+        document.getElementById("forgotPasswordLink").style.display = "none";
+        document.querySelector(".back-button").style.display = "block";
+        document.getElementById("cardHeader").innerHTML = '<h4 class="mb-0">Forgot Password</h4>';
+    }
+
+    function showLogin() {
+        document.getElementById("loginForm").style.display = "block";
+        document.getElementById("forgotPasswordForm").style.display = "none";
+        document.getElementById("forgotPasswordLink").style.display = "block";
+        document.querySelector(".back-button").style.display = "none";
+        document.getElementById("cardHeader").innerHTML = '<h4 class="mb-0">Login</h4><span class="back-button" onclick="showLogin()">← Back</span>';
+    }
+</script>
+
+</body>
+</html>
