@@ -12,9 +12,38 @@
   height: 2rem;
 }
 .custom-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;  
+}
+.horizontal-scroll .card {
+  flex: 0 0 auto;
+  margin: 0 1.2rem; 
+}
+.status{
+  font-size: 0.8rem;
+  border-radius: 3px;
+  border: solid 1px #000;
+  padding: 0.2em 0.5em;
+}
+.skill{
+  font-size: 0.85rem;
+  background: #e7e7e7;
+  border-radius: 3px;
+  padding: 0.05em 0.8em;
+  margin-right: 0.5em ;
+  margin-bottom: 0.5em;
+}
+.card-text{
+  font-size: 0.8rem;
 }
