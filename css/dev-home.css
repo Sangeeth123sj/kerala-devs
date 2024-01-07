@@ -12,9 +12,70 @@
   height: 2rem;
 }
 .custom-title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 .shadow {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll .card {
+  flex: 0 0 auto;
+  margin: 0 1.2rem;
+}
+.status {
+  font-size: 0.8rem;
+  border-radius: 3px;
+  border: solid 1px #c8c8c8;
+  padding: 0.2em 0.5em;
+}
+.skill {
+  font-size: 0.85rem;
+  background: #ececec;
+  border-radius: 3px;
+  padding: 0.05em 0.8em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+.card-text {
+  font-size: 0.8rem;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  justify-content: center;
+  z-index: 2; 
+}
+.transparent-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.more-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: 1; 
 }
