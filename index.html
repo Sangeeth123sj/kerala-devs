@@ -1,214 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/webp" href="static/elephant1.webp">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="static/elephant1.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenSource Gig Platform</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="basic-styles.css">
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="basic-styles.css" />
     <style>
-        /* Customize colors, fonts, etc. */
-        .section-one {
-            background-color: #f8f9fa; /* Example color */
-            color: #333; /* Example color */
-        }
-        .section-two {
-            background-color: #e9ecef; /* Example color */
-            color: #555; /* Example color */
-        }
-        /* Custom CSS */
-        .landing-image {
-            border-radius: 10px; /* Adds rounded corners */
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8); /* Adds a subtle box shadow */
-        }
-        .github-icon{
-            padding: 10px;
-            height: 40px;
-        }
-
-        /* Add more section styles as needed */
+      /* Customize colors, fonts, etc. */
+      .section-one {
+        background-color: #f8f9fa; /* Example color */
+        color: #333; /* Example color */
+      }
+      .section-two {
+        background-color: #e9ecef; /* Example color */
+        color: #555; /* Example color */
+      }
+      /* Custom CSS */
+      .landing-image {
+        border-radius: 10px; /* Adds rounded corners */
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8); /* Adds a subtle box shadow */
+      }
+      /* Add more section styles as needed */
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Kerala Devs<img class="kerala-dev-logo" src="static/elephant1.webp"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <!-- Add more navbar items as needed -->
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="/index.html"
+          >Kerala Devs<img class="kerala-dev-logo" src="static/elephant1.webp"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mr-5">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">About</a>
+            </li>
+            <!-- Add more navbar items as needed -->
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Section One: Explanation -->
-    <section class="section-one py-5">
-        <div class="container">
-            <h1 class="center-text">Welcome to Our OpenSource Kerala Developers Gig/Job Platform</h1>
-            <p>Our platform is dedicated to the growth of the Python community. It serves as a hub for freelancers and job seekers, offering opportunities and fostering collaboration within the community.</p>
-        </div>
+    <section class="section-one py-5 ">
+      <div class="container">
+        <h1 class="center-text">
+          Welcome to Our OpenSource Kerala Developers Gig/Job Platform
+        </h1>
+        <p>
+          Our platform is dedicated to the growth of the Python community. It
+          serves as a hub for freelancers and job seekers, offering
+          opportunities and fostering collaboration within the community.
+        </p>
+      </div>
     </section>
-
-
 
     <!-- Section Two triplet -->
     <!-- Section Three: Enhance Portfolio -->
-<section class="section-three py-5">
-    <div class="container">
+    <section class="section-three py-5">
+      <div class="container">
         <div class="row">
-            <div class="col-md-6 mb-5">
-                <img src="static/tick.jpg" alt="Enhance Portfolio" class="img-fluid landing-image">
-            </div>
-            <div class="col-md-6">
-                <h2>Enhance Your Portfolio</h2>
-                <p>Unleash the potential of your portfolio by contributing to this dynamic open-source project. Whether you're a seasoned developer or just starting your journey, collaborating on this platform is the gateway to showcasing your skills to the world. Every commit, every line of code, and every idea you bring adds depth to your portfolio and amplifies your expertise.
-                    By joining our community of passionate developers, you gain the opportunity to work on real-world projects, collaborate with industry professionals, and leave your mark in the thriving Python ecosystem. Build your profile, showcase your contributions, and elevate your credibility among potential employers. Let your journey to professional growth begin here!
-                </p>
-                <a class="btn btn-dark" href="https://github.com/Sangeeth123sj/kerala-devs">Contribute<img class="github-icon" src="static/github.svg"></a>
-            </div>
-           
+          <div class="col-md-6 mb-5">
+            <img
+              src="static/tick.jpg"
+              alt="Enhance Portfolio"
+              class="img-fluid landing-image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2>Enhance Your Portfolio</h2>
+            <p>
+              Unleash the potential of your portfolio by contributing to this
+              dynamic open-source project. Whether you're a seasoned developer
+              or just starting your journey, collaborating on this platform is
+              the gateway to showcasing your skills to the world. Every commit,
+              every line of code, and every idea you bring adds depth to your
+              portfolio and amplifies your expertise. By joining our community
+              of passionate developers, you gain the opportunity to work on
+              real-world projects, collaborate with industry professionals, and
+              leave your mark in the thriving Python ecosystem. Build your
+              profile, showcase your contributions, and elevate your credibility
+              among potential employers. Let your journey to professional growth
+              begin here!
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://github.com/Sangeeth123sj/kerala-devs"
+              >Contribute<img class="github-icon" src="static/github.svg"
+            /></a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Section Four: Exclusive Job/Gig Platform -->
-<section class="section-four py-5">
-    <div class="container">
+    <!-- Section Four: Exclusive Job/Gig Platform -->
+    <section class="section-four py-5">
+      <div class="container">
         <div class="row">
-            <div class="col-md-6 mb-5">
-                <h2>Exclusive Job/Gig Platform</h2>
-                <p>Unlock access to Kerala's exclusive job and gig platform, designed to connect top-tier companies directly with skilled professionals like you. 
-                    <b>This platform isn't just about job listings; it's a curated space dedicated to fostering opportunities within Kerala's vibrant tech ecosystem.</b>
-                    As a member, you'll gain direct exposure to prestigious companies in Kerala seeking top talent. 
-                    Find coveted job positions, freelance gigs, and project opportunities aligned with your expertise.
-                    Experience a platform tailored to your needs, providing direct connections to local employers, cutting through the noise of international job portals.
-                    Join a community that prioritizes local talent, offering a gateway to prime career opportunities within Kerala's thriving tech landscape.
-                     Your next career move awaits, right here in the heart of Kerala's innovation hub!</p>
-                     <button class="btn btn-dark" onclick="openWaitlistForm()">Join Waitlist<img class="github-icon" src="static/join.svg"></button>
-            </div>
-            <div class="col-md-6">
-                <img src="static/interview.jpg" alt="Exclusive Job/Gig Platform" class="img-fluid landing-image">
-            </div>
+          <div class="col-md-6 mb-5">
+            <h2>Exclusive Job/Gig Platform</h2>
+            <p>
+              Unlock access to Kerala's exclusive job and gig platform, designed
+              to connect top-tier companies directly with skilled professionals
+              like you.
+              <b
+                >This platform isn't just about job listings; it's a curated
+                space dedicated to fostering opportunities within Kerala's
+                vibrant tech ecosystem.</b
+              >
+              As a member, you'll gain direct exposure to prestigious companies
+              in Kerala seeking top talent. Find coveted job positions,
+              freelance gigs, and project opportunities aligned with your
+              expertise. Experience a platform tailored to your needs, providing
+              direct connections to local employers, cutting through the noise
+              of international job portals. Join a community that prioritizes
+              local talent, offering a gateway to prime career opportunities
+              within Kerala's thriving tech landscape. Your next career move
+              awaits, right here in the heart of Kerala's innovation hub!
+            </p>
+            <button class="btn btn-dark" onclick="openWaitlistForm()">
+              Join Waitlist<img class="github-icon" src="static/join.svg" />
+            </button>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="static/interview.jpg"
+              alt="Exclusive Job/Gig Platform"
+              class="img-fluid landing-image"
+            />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Section Five: Hall of Fame -->
-<section class="section-five py-5">
-    <div class="container">
+    <!-- Section Five: Hall of Fame -->
+    <section class="section-five py-5">
+      <div class="container">
         <div class="row">
-            <div class="col-md-6 mb-5">
-                <img src="static/hired.jpg" alt="Hall of Fame" class="img-fluid landing-image">
-            </div>
-            <div class="col-md-6">
-                <h2>Hall of Fame</h2>
-                <p>Be one of the <b>exclusive initial six builders</b> of this innovative platform! Contribute your skills and expertise to shape the future of this vibrant community-driven initiative. As a pioneer, <b>your efforts will be recognized with special badges, elevating your profile in job searches and showcasing your dedication to the platform's development</b>.
-                    Fork the repository and become an integral part of this collaborative journey. Your contributions will not only be acknowledged but celebrated as you leave an indelible mark on this open-source gig/job platform. Stand out among the community, gain visibility, and be part of the pioneering force shaping the future of Kerala's tech ecosystem.
-                    Join the elite league of platform builders and solidify your presence in the Hall of Fame!<br/>
-                    Fork the repo and contribute!</p>
-                <a class="btn btn-dark" href="https://github.com/Sangeeth123sj/kerala-devs">Contribute<img class="github-icon" src="static/github.svg"></a>
-            </div>
-            
+          <div class="col-md-6 mb-5">
+            <img
+              src="static/hired.jpg"
+              alt="Hall of Fame"
+              class="img-fluid landing-image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2>Hall of Fame</h2>
+            <p>
+              Be one of the <b>exclusive initial six builders</b> of this
+              innovative platform! Contribute your skills and expertise to shape
+              the future of this vibrant community-driven initiative. As a
+              pioneer,
+              <b
+                >your efforts will be recognized with special badges, elevating
+                your profile in job searches and showcasing your dedication to
+                the platform's development</b
+              >. Fork the repository and become an integral part of this
+              collaborative journey. Your contributions will not only be
+              acknowledged but celebrated as you leave an indelible mark on this
+              open-source gig/job platform. Stand out among the community, gain
+              visibility, and be part of the pioneering force shaping the future
+              of Kerala's tech ecosystem. Join the elite league of platform
+              builders and solidify your presence in the Hall of Fame!<br />
+              Fork the repo and contribute!
+            </p>
+            <a
+              class="btn btn-dark"
+              href="https://github.com/Sangeeth123sj/kerala-devs"
+              >Contribute<img class="github-icon" src="static/github.svg"
+            /></a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!--  -->
-
+    <!--  -->
 
     <!-- Section Three: Platform Features -->
     <section class="section-two py-5">
-        <div class="container">
-            <h2 class="center-text">What We Offer</h2>
-            <p>Here are some key features:</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>Job Listings</h3>
-                    <p>Explore various job opportunities in the Python domain.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Freelance Gigs</h3>
-                    <p>Find freelance gigs and projects suited to your skills.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Community Collaboration</h3>
-                    <p>Connect and collaborate with fellow Python enthusiasts.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="center-text">What We Offer</h2>
+        <p>Here are some key features:</p>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Job Listings</h3>
+            <p>Explore various job opportunities in the Python domain.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Freelance Gigs</h3>
+            <p>Find freelance gigs and projects suited to your skills.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Community Collaboration</h3>
+            <p>Connect and collaborate with fellow Python enthusiasts.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Add more sections as needed -->
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <p class="text-center">&copy; 2023 YourPlatform. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p class="text-center">
+          &copy; 2023 YourPlatform. All rights reserved.
+        </p>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function openWaitlistForm() {
+      function openWaitlistForm() {
+        Swal.fire({
+          title: "Enter Email",
+          input: "text",
+          showCancelButton: true,
+          confirmButtonText: "Submit",
+          preConfirm: async (email) => {
+            try {
+              const formData = new FormData();
+              formData.append("email", email);
+
+              const response = await fetch(
+                "http://127.0.0.1:8000/submit_email/",
+                {
+                  method: "POST",
+                  body: formData,
+                }
+              );
+
+              if (!response.ok) {
+                const errorMsg = await response.json();
+                throw new Error(JSON.stringify(errorMsg));
+              }
+
+              return response.json();
+            } catch (error) {
+              throw new Error(`Request failed: ${error}`);
+            }
+          },
+          allowOutsideClick: () => !Swal.isLoading(),
+        })
+          .then((result) => {
+            if (result.value) {
+              Swal.fire({
+                title: "Success!",
+                text: `Received email: ${result.value.email}`,
+              });
+            }
+          })
+          .catch((error) => {
             Swal.fire({
-                title: 'Enter Email',
-                input: 'text',
-                showCancelButton: true,
-                confirmButtonText: 'Submit',
-                preConfirm: async (email) => {
-                    try {
-                        const formData = new FormData();
-                        formData.append('email', email);
-
-                        const response = await fetch('http://127.0.0.1:8000/submit_email/', {
-                        method: 'POST',
-                        body: formData
-                        });
-
-                        if (!response.ok) {
-                        const errorMsg = await response.json();
-                        throw new Error(JSON.stringify(errorMsg));
-                        }
-
-                        return response.json();
-                    } catch (error) {
-                        throw new Error(`Request failed: ${error}`);
-                    }
-                    },
-                    allowOutsideClick: () => !Swal.isLoading()
-                })
-                .then((result) => {
-                    if (result.value) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: `Received email: ${result.value.email}`
-                    });
-                    }
-                })
-                .catch((error) => {
-                    Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: error.message
-                });
+              icon: "error",
+              title: "Oops...",
+              text: error.message,
             });
-        }
-
+          });
+      }
     </script>
-</body>
+  </body>
 </html>
