@@ -23,6 +23,11 @@ p{
     height: 40px;
 }
 
+.kerala-dev-logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+
 .github-icon {
     padding: 10px;
     height: 40px;
