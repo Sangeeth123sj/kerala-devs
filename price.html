@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Platform Pricing</title>
+  <link rel="icon" type="image/webp" href="static/elephant1.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script
+    src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="basic-styles.css" />
+  <style>
+    /* Custom styles */
+    .container {
+      padding: 20px;
+    }
+    .heading-image {
+      margin-bottom: 20px;
+    }
+    .heading-image img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .heading-image h1, .heading-image h3, .ad-section h2, .ad-section h3 {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .pricing-cards .card  {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow 0.3s;
+    }
+    .pricing-cards .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+    .pricing-cards .card-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .ad-section {
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+    .ad-section img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="row mx-auto">
+      <nav
+        class="navbar navbar-expand-lg bg-light p-3 mb-3 border-bottom fixed-top"
+      >
+        <div class="container-fluid">
+          <a
+            class="navbar-brand text-dark me-4 kerala-dev-logo custom-title"
+            href="/"
+          >
+            Kerala Devs
+            <img
+              src="./static/elephant1.webp"
+              alt="kerala-dev-logo"
+              srcset=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Offcanvas -->
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body d-lg-none">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-dark mx-2"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark mx-2" href="#">Companies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark mx-2" href="./index.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark mx-2" href="./contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark mx-2" href="./login.html">Login</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link text-dark mx-2" href="./login.html">Login</a>
+                </li> -->
+                <div class="dropdown mt-2">
+                  <a
+                    href="#"
+                    class="link-dark text-decoration-none dropdown-toggle"
+                    id="dropdownUser1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="./static/Dummy_profile.png"
+                      alt="mdo"
+                      width="36"
+                      height="36"
+                      class="rounded-circle"
+                    />
+                  </a>
+                  <ul
+                    class="dropdown-menu text-small dropdown-menu-end"
+                    aria-labelledby="dropdownUser1"
+                  >
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Preference</a></li>
+                    <li><a class="dropdown-item" href="#">settings</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!-- Nav items for Large Screens -->
+          <div class="col-md-3 d-none d-lg-block">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-dark mx-2"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="#">Companies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="./index.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mx-2" href="./login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Search Form for Large Screens -->
+          <form class="col-md-4 ms-5 d-none d-lg-block">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search jobs or companies"
+              aria-label="Search"
+            />
+          </form>
+          <!-- Drop down Profile icon for large screen -->
+          <div class="dropdown col-md-3 text-end d-none d-lg-block">
+            <a
+              href="#"
+              class="link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="./static/Dummy_profile.png"
+                alt="mdo"
+                width="36"
+                height="36"
+                class="rounded-circle"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small dropdown-menu-end shadow"
+              aria-labelledby="dropdownUser1"
+            >
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Preference</a></li>
+              <li><a class="dropdown-item" href="#">settings</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Search Form for small Screens -->
+      <div class="container col-10 mt-5 pt-5">
+        <form class="d-flex d-lg-none">
+          <input
+            class="form-control shadow"
+            type="search"
+            placeholder="Search jobs or companies"
+            aria-label="Search"
+          />
+        </form>
+      </div>
+    </div>
+  </header>
+  <!--  -->
+  <div class="container mt-5">
+    <!-- Heading for Developers -->
+    <h1 class="text-center">Looking for job opportunities?</h1>
+    <h3 class="text-center mb-5">It's completely free for developers!</h3>
+
+    <!-- Heading for Companies -->
+    <h2 class="text-center font-weight-bold mb-4">Looking to hire the right talent?</h2>
+
+    <!-- Pricing Cards for Companies -->
+    <div class="row pricing-cards">
+      <!-- Free Tier -->
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Free Tier</h5>
+            <p class="card-text">Limited job postings</p>
+            <p class="card-text">Basic visibility</p>
+            <p class="card-text">Standard support</p>
+            <!-- <p class="card-text font-weight-bold">Free</p> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Tier -->
+      <div class="col-lg-4 mb-4">
+        <div class="card card-shadow">
+          <div class="card-body">
+            <h5 class="card-title">Standard Tier (₹500/month)</h5>
+            <p class="card-text">Moderate job postings</p>
+            <p class="card-text">Enhanced visibility</p>
+            <p class="card-text">Analytics & support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Tier -->
+      <div class="col-lg-4 mb-4">
+        <div class="card card-shadow">
+          <div class="card-body">
+            <h5 class="card-title">Premium Tier (₹1500/month)</h5>
+            <p class="card-text">Unlimited job postings</p>
+            <p class="card-text">Top-tier visibility</p>
+            <p class="card-text">Detailed analytics & support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advertisement Plan Section -->
+    <div class="row mt-5">
+      <div class="col-lg-12">
+        <div class="ad-section">
+          <h3 class="text-center">Ad Placement Options</h3>
+          <p class="text-center">Banner ads, Sponsored listings, Display ads</p>
+          <h4 class="text-center">Ad Plan (₹1000/month)</h4>
+          <p class="text-center">Standard visibility to users</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Footer -->
+   <div class="conatiner mt-5">
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-4 px-5 border-top bg-light"
+    >
+      <a
+        href="/"
+        class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 me-md-auto link-dark text-decoration-none kerala-dev-logo"
+      >
+        <img src="./static/elephant1.webp" alt="" srcset="" />
+      </a>
+      <ul class="nav col-12 col-lg-4 justify-content-around">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Companies</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-muted">Contact</a>
+        </li>
+      </ul>
+      <p
+        class="col-12 col-lg-4 mb-0 text-center text-lg-end mt-3 mt-lg-0 text-muted"
+      >
+        © 2024 Kerala Devs
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
